@@ -1,0 +1,186 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li { margin: 0 15px; }
+
+nav a { color: white; text-decoration: none; font-weight: bold; }
+
+section {
+    padding: 80px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.proyecto-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.proyecto-card:hover { transform: scale(1.02); }
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Estilo para la Foto de Perfil */
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Esto la hace circular */
+    object-fit: cover;
+    border: 3px solid #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la sección del mensaje motivacional */
+#mensaje-motivacional {
+    background-color: #f8f9fa; /* Un color de fondo suave */
+    text-align: center;
+    padding: 80px 20px;
+    border-bottom: 1px solid #eee; /* Una línea sutil para separarlo */
+}
+
+.texto-resaltado h2 {
+    font-size: 3.2em; /* ¡Grande y llamativo! */
+    color: #2c3e50; /* Un color oscuro para contraste */
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px; /* Espacio para el efecto de línea */
+}
+
+/* Efecto de línea inferior para h2 */
+.texto-resaltado h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px; /* Longitud de la línea */
+    height: 4px;
+    background-color: #3498db; /* Color de la línea (azul brillante) */
+    border-radius: 2px;
+}
+
+.texto-resaltado p {
+    font-size: 1.4em;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Estilo para la palabra/frase a destacar */
+.destacar {
+    color: #e74c3c; /* Un color vibrante para 'crear el futuro' */
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Una sombra para darle profundidad */
+}
+#contacto {
+    background-color: #ffffff;
+    padding: 100px 20px;
+}
+
+.contacto-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide en dos columnas */
+    gap: 50px;
+    align-items: center;
+}
+
+/* Información de contacto */
+.contacto-info h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.datos-contacto {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.datos-contacto li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* Estilo del Formulario */
+.contacto-form {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.grupo-input {
+    margin-bottom: 20px;
+}
+
+.contacto-form input, 
+.contacto-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+    box-sizing: border-box; /* Evita que el input se salga del cuadro */
+}
+
+.contacto-form input:focus, 
+.contacto-form textarea:focus {
+    border-color: #3498db; /* Cambia de color al hacer clic */
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-enviar:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+    .contacto-container {
+        grid-template-columns: 1fr;
+    }
+}
